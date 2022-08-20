@@ -1,0 +1,43 @@
+<div class="container">
+	<div class="container-inner">
+		<div class="inner-box">
+			<div class="login">
+				<form action="/register" method="POST">
+
+					<h1>Create a New Account</h1>
+					<label>User Name</label>
+					<!-- <input type="string" name="_uname"> -->
+					<input type="text" name="_uname" placeholder="Username">
+
+					<label>Password</label>
+					<!-- <input type="password" name="_passw"> -->
+					<input type="password" name="_passw" placeholder="Type your password">
+
+					<label>Email</label>
+					<input type="email" name="email" placeholder="Your Email">
+
+					<label>Phone</label>
+					<input type="tel" name="phone" placeholder="Your Number">
+
+					<div class="login-last">
+						<a href="/">Back to Home</a>
+						<input type="submit" value="Create Account">
+					</div>
+				<!--
+					<cfif success>
+						Login generation successful.
+					</cfif>
+
+					<cfif loginProblem neq "">
+						<cfoutput>#loginProblem#</cfoutput>
+					</cfif>
+				-->
+				</form>
+			</div>
+			<footer>
+				<p>Copyright 2021</p>
+				<p>Built with love and care by <a href="http://ironhead.io">Ironhead</a></p>
+			</footer>
+		</div>
+	</div>
+</div> <!-- container -->
