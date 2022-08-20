@@ -1,0 +1,35 @@
+<section id="expenses">
+	<h2>Your Expenses</h2>
+	<button class="add">Add New Line</button>
+	<table class="budget">
+		<thead>
+			<th>Item</th>
+			<th>Cost</th>
+			<th>Due Date</th>
+		</thead>
+		<tbody *ngFor="let x of expenseLines">
+			<tr>
+				<td>
+					<div class="ctnt">
+						<div>
+							{{ x.name }}
+						</div>
+						<div>
+							<button class="controller">
+								<i class="material-icons">list_alt</i>
+							</button>
+							<button class="controller">
+								<i class="material-icons">create</i>
+							</button>
+							<button class="controller">
+								<i class="material-icons">highlight_off</i>
+							</button>
+						</div>
+					</div>
+				</td>
+				<td>{{ x.amount | currency }}</td>
+				<td>-</td>
+			</tr>
+		</tbody>
+	</table>
+</section>

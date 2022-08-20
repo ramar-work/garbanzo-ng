@@ -1,0 +1,5 @@
+<div class="budget-nav">
+	<a *ngFor="let l of materialNavigation" (click)="attach($event)" href="{{ l.href }}">
+		<i class="sort-icon material-icons">{{ l.text }}</i>
+	</a>
+</div>

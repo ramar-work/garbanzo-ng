@@ -1,0 +1,53 @@
+/* -------------------------------------------- *
+ * login-container 
+ *
+ * Just controls the appearance of the login
+ * elements.
+ * -------------------------------------------- */
+.login-container {
+	width: 100%;
+	height: 100%;
+}  
+
+.login-container-body {
+	display: block;
+	width: 60%;
+	min-width: 300px;
+	margin: 0 auto;
+	height: 70%;
+	min-height: 300px;
+	border: 1px solid black;
+	padding-top: 5%;
+	margin-top: 15%;
+}
+
+form.login-container-body .form-item {
+	display: block;
+	position: relative;
+	min-height: 100px;
+	margin: 0 auto;
+	width: 80%;
+	border: 1px solid black;
+	padding-top: 5%;
+}
+
+form.login-container-body .form-item img {
+	display: block;
+	height: 200px
+}
+
+form.login-container-body .form-item label {
+	display: block;
+}
+
+form.login-container-body .form-item input[type=text] ,
+form.login-container-body .form-item input[type=password] {
+	display: block;
+	padding: 2%;
+	font-size: 1.5em;
+	width: 100%;
+	font-family: "Montserrat";
+}
+
+
+

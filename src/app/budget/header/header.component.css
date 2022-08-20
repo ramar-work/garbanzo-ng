@@ -1,0 +1,22 @@
+header.app-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.app-header-left, 
+.app-header-center, 
+.app-header-right {
+	text-align: left;		
+	text-transform: capitalize;
+	height: 100%;
+	padding-top: 15px;
+}
+
+.app-header-right {
+	text-align: right;		
+	font-weight: bold;
+	background-color: purple;
+}
+
+

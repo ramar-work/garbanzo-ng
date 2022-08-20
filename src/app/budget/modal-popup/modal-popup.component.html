@@ -1,0 +1,51 @@
+<div class="window-modal"> 
+	<div class="inner-modal">
+		<div class="inner-modal-header">
+			<span (click)="close()">X</span>
+		</div>
+		<form>
+			<h2>Add Income</h2>
+			<div>
+				<label>Employer / Source</label>
+				<input name="source">
+			</div>
+			<div>
+				<label>Earnings After Tax</label>
+				<input name="earnings">
+			</div>
+			<div>
+				<div>
+					<label>Frequency</label>
+					<select name="type">
+						<option selected>Choose One</option>
+						<option value="1">Bi-Weekly</option>
+						<option value="3">Weekly</option>
+						<option value="2">Monthly</option>
+						<option value="4">Once</option>
+					</select>	
+				</div>
+				<div>
+					<label>Type</label>
+					<select name="type">
+						<option selected>Choose One</option>
+						<option value="1">W2</option>
+						<option value="2">1099</option>
+					</select>	
+				</div>
+			</div>
+			<div>
+				<label>Date of Receipt</label>
+				<input name="receipt_date">
+			</div>
+			<div>
+				<label>Notes</label>	
+			</div>
+			<div>
+				<textarea name="notes"></textarea>
+			</div>
+			<div>
+				<input type="submit" name="submit">
+			</div>
+		</form>
+	</div>
+</div>

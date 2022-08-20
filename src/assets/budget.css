@@ -1,0 +1,1214 @@
+/* budget.css */
+/* -------------------------------------------- *
+ * index.css
+ * ---------
+ * 
+ * gogarbanzo.com CSS pages.
+ * 
+ * There are some layout rules here... so just 
+ * follow 'em.
+ * -------------------------------------------- */
+
+/* -------------------------------------------- *
+ * Global styles:
+ *
+ * These are used to set the stage for the rest
+ * of the elements.
+ * -------------------------------------------- */
+html {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 200;
+	background-color: rgb( 230, 255, 242 );
+	/*These are the rest of the colors*/
+	width: 100%;
+}
+
+.assetized-logo {
+	font-size: 2.2em;
+	font-weight: bold;
+	color: white;
+	position: relative;
+	left: 10px;
+	top: -5px;
+	font-family: 'Permanent Marker', cursive;
+	text-align: left;
+}
+
+.main {
+	font-weight: bold;
+	height: 100px;
+	width: 90%;
+	min-width: 220px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.main .left {
+	font-weight: normal;
+	text-align: right;
+}
+
+.main .left #itotal {
+	color: darkgreen;
+}
+
+.main .left #xtotal {
+	color: red;
+	padding-bottom: 5px;
+	border-bottom: 2px solid rgb( 40,40,40 );
+}
+
+.main .left #xtotal:before {
+	content: '- ';
+}
+
+.main .right {
+	text-align: right;
+}
+
+.main .right h1 {
+	position: absolute;
+	top: 25%;
+	left: -10px;
+}
+
+.main #total {
+	font-weight: bold;
+	letter-spacing: -2px;
+	position: relative;
+	top: 7.0px;
+	text-shadow: 5px 5px rgba(180,180,180,0.3);
+	color: rgba(60,60,60,0.9);
+	/*filter: blur(1px);*/
+}
+
+.main #total.js-negative {
+	color: red;
+}
+
+.container {
+	position: relative;
+	width: 90%;
+	margin: 0 auto;
+	max-width: 999px;
+	min-height: 110%;
+}
+
+h1 { font-size: 3.0em; }
+h2 { font-size: 2.5em; }
+h3 { font-size: 2.0em; }
+h4 { font-size: 1.6em; }
+h5 { font-size: 1.4em; }
+h6 { font-size: 1.2em; }
+
+
+/* -------------------------------------------- *
+ * header
+ *
+ * These are used to set the stage for the rest
+ * of the elements.
+ * -------------------------------------------- */
+
+header {
+	width: 100%;
+	z-index: 99;
+	min-height: 50px;	
+	height: 3%;  
+	display: block;
+	position: relative;
+	overflow: hidden;
+	color: white;
+	font-family: 'Montserrat', serif;
+	font-weight: bold;
+	font-size: 0.8em;
+	background: darkgreen;
+	/*background-color: rgb( 152, 230, 152 );*/
+}
+
+header a {
+	color: white;
+}
+
+header li {
+	display: inline-block;
+}
+
+footer {
+
+}
+
+.header--left, .header--right {
+	width: 40%;
+	float: left;		
+	text-transform: capitalize;
+	height: 100%;
+	padding-top: 15px;
+}
+
+.header--right {
+	float: right;		
+	text-align: center;
+	font-weight: bold;
+}
+
+.header--left li {
+	position: relative;
+	left: 10px;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.header--right li {
+	margin-left: 20px;
+	transition: background-color 0.3s, color 0.3s;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/*
+.header--left li::after,
+.header--right li::after {
+	content: ' |'
+}
+*/
+
+/*last child shouldn't have this*/
+/*
+.header--left li:last-child::after,
+.header--right li:last-child::after {
+	content: ' '
+}
+*/
+
+/*.header--left li:hover, */
+.header--right li:hover {
+	color: darkgreen;	
+	background-color: rgb( 152, 230, 152 );	
+}
+
+.header__icon {
+	position: relative;
+	width: 40px;
+	top: -10px;
+	left: 5px;
+	height: 40px;
+	border: 1px solid black;
+	border-radius: 25px;
+	-moz-border-radius: 25px;
+	-gecko-border-radius: 25px;
+	overflow: hidden;
+	display: inline-block;	
+	float: left;
+	background-image: url("../files/icon.png");
+	/*background-size ; or position */
+}
+
+.header__primary-nav li.list--item {
+	width: 100%;
+	height: 5%;
+	padding-bottom: 0px;
+	text-align: center;
+	text-transform: uppercase;
+	min-height: 70px;
+	border: 1px solid black;
+	font-size: 2em;
+	overflow: hidden;
+	padding-top: 25px;
+} 
+
+.header__primary-nav li.list--item:hover {
+	background-color: black;
+	color: white;
+}
+
+.header__primary-nav li.list--item:hover a {
+	color: white;
+}
+
+
+/* -------------------------------------------- *
+ * login-container 
+ *
+ * Just controls the appearance of the login
+ * elements.
+ * -------------------------------------------- */
+.login-container {
+	width: 100%;
+	height: 100%;
+}  
+
+.login-container-body {
+	display: block;
+	width: 60%;
+	min-width: 300px;
+	margin: 0 auto;
+	height: 70%;
+	min-height: 300px;
+	border: 1px solid black;
+	padding-top: 5%;
+	margin-top: 15%;
+}
+
+form.login-container-body .form-item {
+	display: block;
+	position: relative;
+	min-height: 100px;
+	margin: 0 auto;
+	width: 80%;
+	border: 1px solid black;
+	padding-top: 5%;
+}
+
+form.login-container-body .form-item img {
+	display: block;
+	height: 200px
+}
+
+form.login-container-body .form-item label {
+	display: block;
+}
+
+form.login-container-body .form-item input[type=text] ,
+form.login-container-body .form-item input[type=password] {
+	display: block;
+	padding: 2%;
+	font-size: 1.5em;
+	width: 100%;
+	font-family: "Montserrat";
+}
+
+
+
+/* -------------------------------------------- *
+ * app-style
+ *
+ * It MIGHT be easier to use this to start off. 
+ * Style the simple elements within the app with
+ * these rules. 
+ * -------------------------------------------- */
+.outer-app__banner {
+	padding: 10px;
+	margin-top: 50px;
+	color: rgb(60, 60, 60);
+}
+
+.inner-app__banner {
+	padding: 0px;
+	width: 100%;
+	position: relative;
+	padding-top: 10px;	
+	margin-bottom: 50px;	
+}
+
+.inner-app__banner p {
+	margin-bottom: 10px;
+}
+
+.inner-app__banner div i {
+	font-size: 2.6em;
+	font-weight: bold;
+	transition: color 0.3s;
+	color: darkgreen;
+	margin-right: 30px;
+	/*background-color: rgb( 152, 230, 152 );*/
+}
+
+.inner-app__banner div i:hover {
+	color: #eee;
+	color: rgb( 152, 230, 152 );
+	/*background-color: rgb( 152, 230, 152 );*/
+}
+
+.inner-app__banner div i:first-child {
+	transform: rotate( -45deg );	
+}
+
+.inner-app__banner button {
+	background-color: darkgreen;	
+	border: 0px;
+/*
+	min-width: 100px;
+	max-width: 200px;
+	width: 20%;
+*/
+	color: white;
+	padding: 7px;
+	transition: background-color 0.3s, color 0.3s;
+	text-transform: capitalize;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.inner-app__banner button:hover {
+	color: black;
+	background-color: rgb( 152, 230, 152 );
+}
+
+.inner-app__banner h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 20px;	
+}
+
+.inner-app__banner h2 {
+	position: relative;
+	margin-top: 20px;	
+}
+
+.inner-app__banner-header div a {
+	color: darkgreen;
+	text-shadow: 2px 2px rgba(180,180,180,0.3);
+}
+
+i.income, i.expenses {
+	letter-spacing: -8px;
+}
+
+i.expenses {
+	transform: rotate(180deg);
+	position: relative;
+	left: 5px;
+}
+
+
+
+.app-style {
+	padding-top: 10px;	
+	padding-bottom: 50px;	
+}
+
+
+
+
+/* -------------------------------------------- *
+ * Budget menu items 
+ *
+ * Tehre are probably some things I can do to 
+ * make some of these things global...
+ * -------------------------------------------- */
+table.budget {
+	width: 100%;
+	margin-top: 20px;
+}
+
+table.budget tr:nth-child(odd) {
+	/*background: rgb(77, 255, 163);*/
+}
+
+table.budget tr:nth-child(even) {
+	background-color: rgb(177,205,190);
+	background-color: rgb(210,249,228);
+}
+
+table.budget tr {
+	transition: background-color 0.3s, color 0.3s, font-weight 0.3s;
+	height: 40px;
+	font-weight: 300;
+}
+
+table.budget tbody tr:hover {
+	background-color: white;
+	background-color: rgb( 152, 230, 152 );
+	font-weight: bold;
+}
+
+table.budget tr td {
+	padding: 0px;
+	padding-bottom: 5px;
+	padding-top: 12px;
+	text-align: left;
+	padding-left: 5px;
+}
+
+table.budget tr td:first-child {
+	width: 70%;
+}
+
+table.budget tr td:first-child .ctnt {
+	text-align: left;
+	text-transform: capitalize;
+	display: inline-flex;
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
+}
+
+table.budget tr td:nth-child(2) {
+	width: 20%;
+}
+
+table.budget tr td:nth-child(3) {
+	width: 10%;
+}
+
+
+table.budget thead {
+	text-align: left;
+	border-bottom: 1px solid black;
+	height: 30px;
+}
+
+table.budget thead th {
+	font-weight: 200;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	text-transform: capitalize;
+	font-size: 1.0em;
+}
+
+table.budget button {
+	width: 30px;
+	height: 30px;
+	border: 0px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-gecko-border-radius: 5px;
+	overflow: hidden;
+	font-size: 16px;
+	float: right;
+	position: relative;
+	padding: 1px;
+	top: -5px;
+	font-weight: 300;
+	left: -7px;
+	margin: 0px;
+	margin-left: 8px;
+	margin-right: 5px;
+	text-align: center;
+	color: darkgreen;
+	background: none;
+	transition: background 0.3s, color 0.3s;
+	z-index: 99;
+}
+
+table.budget button:hover {
+	background: rgba( 230, 255, 242 );
+	color: darkgreen;
+}
+
+section {
+	position: relative;
+	margin-bottom: 50px;
+}
+
+button.add {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background-color: darkgreen;	
+	border: 0px;
+	color: white;
+	padding: 7px;
+	transition: background-color 0.3s, color 0.3s;
+	text-transform: capitalize;
+	font-family: 'Montserrat', sans-serif;
+}
+
+button.add:hover {
+	color: black;
+	background-color: rgb( 152, 230, 152 );
+}
+
+table.budget i {
+	z-index: 0;
+}
+
+span.ltitle {
+	display: block;
+	line-height: 40px;
+}
+
+table.budget button {
+	float: left;	
+}
+
+#calendar ul {
+	width: 100%;
+} 
+
+#calendar li {
+	position: relative;
+	left: 2.5%;
+}
+
+
+@media screen and (min-width: 666px) {
+	span.ltitle {
+		display: inline;
+		line-height: 40px;
+	}
+
+	table.budget button {
+		position: relative;
+		float: right;	
+		top: 3px;
+	}
+}
+
+
+/* -------------------------------------------- *
+ * Javascript nodes
+ *
+ * Each of the elements that directly interact
+ * with Javascript are prefixed with the term
+ * 'js-' to let the author know that these classes
+ * are controlled somewhere else.
+ * -------------------------------------------- */
+.js-popup-underlay {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	display: block;
+	background: rgba( 230, 255, 242, 0.8 );
+}
+
+.js-popup {
+	position: absolute;
+	top: 10%;
+	height: 70%;
+	min-height: 200px;
+	position: relative;
+	width: 75%;
+	min-width: 280px;
+	margin: 0 auto;
+	background-color: #fff;
+	box-shadow: 10px 10px 10px darkgreen;
+	padding: 5%;
+	padding-top: 60px;
+	overflow: auto;
+}
+
+.js-popup--header {
+	background-color: #eee;
+	background-color: rgb( 230, 255, 242 );
+	background-color: rgb( 152, 230, 152 );
+	background-color: rgb(210,249,228);
+	width: 100%;
+	height: 30px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.js-popup--close {
+	float: right;
+	top: 0px;
+	left: -10px;
+	font-size: 30px;
+	position: relative;
+}
+
+
+.js-popup form {
+	width: 100%;
+}
+
+.js-popup section {
+	width: 100%;
+	display: inline-block;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.js-popup section:nth-child(3) {
+	font-size: 0.9em;
+}
+
+
+.js-popup .form-element-1-1 ,
+.js-popup .form-element-1-2 ,
+.js-popup .form-element-2-3 {
+	width: 100%;
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.js-popup label {
+	display: block;
+	margin-bottom: 5px;
+	font-size: 0.9em;
+}
+/*
+.js-popup .form-element-1-1 label ,
+.js-popup .form-element-1-2 label,
+.js-popup .form-element-2-3 label {
+	display: block;
+	margin-bottom: 5px;
+}
+*/
+
+.js-popup .form-element-1-1 input ,
+.js-popup .form-element-1-2 input,
+.js-popup .form-element-2-3 input {
+	width: 100%;	
+}
+
+.js-popup .form-element-1-1 input:not([type=checkbox]),
+.js-popup .form-element-1-2 input:not([type=checkbox]),
+.js-popup .form-element-2-3 input:not([type=checkbox]), 
+.js-popup .form-element-1-1 select,
+.js-popup .form-element-1-2 select,
+.js-popup .form-element-2-3 select {
+	width: 100%;
+	min-width: 125px;
+	display: block;
+	font-size: 1.2em;
+	padding: 1%;
+	font-family: "Montserrat";
+	margin-bottom: 5px;
+}
+
+.js-popup .form-element-2-3 div:nth-child(2) input:not([type=checkbox]) {
+	min-width: 75px;
+}
+
+.js-popup .form-element-1-1 select,
+.js-popup .form-element-1-2 select,
+.js-popup .form-element-2-3 select {
+	min-width: 50px;
+}
+
+.js-popup .form-element-1-1 div ,
+.js-popup .form-element-1-2 div,
+.js-popup .form-element-2-3 div {
+	vertical-align: top;
+}
+
+.js-popup .form-element-1-2 div {
+	width: 50%;
+	display: inline-block;
+}
+
+.js-popup .form-element-2-3 div:nth-child(1) {
+	width: 70%;
+	display: inline-block;
+}
+
+.js-popup .form-element-2-3 div:nth-child(2) {
+	width: 25%;
+	display: inline-block;
+}
+
+.js-popup .form-element-2-3 div:nth-child(2) div {
+	width: 100%;
+	text-align: right;
+	font-size: 1.2em;
+}
+
+
+.js-popup .form-element-half {
+	width: 45%;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+.js-popup .form-element-half input[type=checkbox].custom {
+	position: relative;
+	display: inline-block;
+}
+
+.js-popup .form-element-half label:nth-child(1) {
+	width: 70%;
+	min-width: 100px;
+	max-width: 200px;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.js-popup .form-element label:nth-child(1) {
+	width: 35%;
+	min-width: 100px;
+	max-width: 200px;
+	display: inline-block;
+	margin-bottom: 2px;
+}
+
+.js-popup .form-element input:not([type=checkbox]) {
+	width: 100%;
+	min-width: 150px;
+	display: block;
+	font-size: 1.2em;
+	padding: 1%;
+	font-family: "Montserrat";
+	margin-bottom: 5px;
+}
+
+.js-popup .form-element {
+	width: 90%;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.js-popup textarea {
+	width: 100%;
+	display: block;
+	min-height: 100px;
+}
+
+.js-popup .form-element-1-1 button,
+.js-popup .form-element-1-1 input[type=submit] {
+	min-width: 100px;
+	max-width: 140px;
+	width: 40%;
+	color: white;
+	padding: 10px;
+	transition: background-color 0.3s, color 0.3s;
+	font-size: 0.9em;
+	text-transform: capitalize;
+	font-family: 'Montserrat', sans-serif;
+	border: 0px;
+	display: inline-block;
+	height: 40px;
+	margin-top: 10px;
+}
+
+.js-popup .form-element-1-1 button {
+	background-color: red;
+	float: left;
+}
+
+.js-popup .form-element-1-1 input[type=submit] {
+	background-color: darkgreen;	
+	float: right;
+}
+
+.js-popup .form-element-1-1 button:hover {
+	background-color: pink;
+	color: black;
+}
+
+.js-popup .form-element-1-1 input[type=submit]:hover {
+	background-color: rgb( 152, 230, 152 );
+	color: black;
+}
+
+/*use bem selector --hidden to hide all?*/
+.js-popup input[type=checkbox].unshow-toggle {
+	border: 0px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+.js-popup div.unshow-div,
+.js-popup div.form-element--hidden {
+	overflow: hidden;
+	height: 1px;
+	transition: height 0.4s;
+	position: relative;
+	width: 100%;
+	border-bottom: 1px solid black;
+	margin-bottom: 10px;
+}
+
+
+.js-popup input[type=checkbox].custom {
+	/*
+	width: 60%;
+	min-width: 150px;
+	display: inline-block;
+	font-size: 1.2em;
+	padding: 1%;
+	text-align: center;
+	*/
+
+	width: 30px;
+	min-width: 30px;
+	padding: 0px;
+	text-align: left;
+	border: 0;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-gecko-border-radius: 10px;
+
+	position: relative;
+	top: 10px;
+	margin-bottom: 5px;
+	left: -5px;
+	height: 30px;
+	z-index: 99;
+	background: none;
+}
+
+
+/*
+#This is style #2
+<input class="custom" type="checkbox" name="payee_onlinecapable">
+<span class="checkmark"></span>
+
+.js-popup input.custom + span.checkmark {
+	text-align:left;
+	position: relative;
+	display: inline-block;
+	top: 10;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+}
+
+.js-popup input.custom:checked + span.checkmark {
+  background-color: #2196F3;
+}
+
+.js-popup span.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.js-popup input:checked + span.checkmark:after {
+  display: block;
+}
+
+.js-popup input:checked + span.checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+*/
+
+/*
+<!-- Rectangular switch -->
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider"></span>
+</label>
+*/
+/*
+.js-popup label.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+	top: -20px;
+}
+
+.js-popup .switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.js-popup .slide {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	transition: 0.3s;
+}
+
+.js-popup .slide:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	transition: 0.3s;
+}
+
+.js-popup input:checked + .slide {
+	background-color: #2196F3;
+}
+
+.js-popup input:focus + .slide {
+	box-shadow: 0 0 1px #2196F3;
+}
+
+.js-popup input:checked + .slide:before {
+	transform: translateX(26px);	
+}
+*/
+
+.js-popup input:checked ~ div.form-element--hidden {
+	display: block;
+	height: auto;
+	padding: 2%;
+	min-height: 50px;
+	max-height: 150px;
+	margin-top: 10px;
+	background-color: rgb( 152, 230, 152 );
+	background-color: rgb(210,249,228);
+}
+
+#my_dataviz svg {
+	position: relative;
+	margin: 0 auto;
+}
+
+/*media*/
+@media only screen and (min-width: 800px) {
+	.main {
+		width: 60%;
+		max-width: 900px;
+	}
+}
+
+
+#demo-alert {
+	width: 80%;
+	position: fixed;
+	margin: 0 auto;
+	left: 10%;
+	top: 10px;
+	background: rgba( 100, 100, 100, 0.8 );
+	color: white;
+	content: "This is a demo";
+	z-index: 9999;
+	height: 30px;
+	padding-top: 10px;
+	text-align: center;
+}
+
+#calendar ul {
+	width: 100%;	
+	min-width: 220px;
+}
+
+.outer-app__banner {
+	margin-bottom: 100px;
+}
+
+#calendar ul li {
+	vertical-align: top;
+	width: 11%;
+	height: 100px;
+	display: inline-block;
+	background-color: white;
+	color: black;
+	padding: 1%;
+	margin-bottom: 5px;
+	transition: width 0.2s, height 0.2s, background 0.2s;
+	position: relative;
+}
+
+#calendar ul li.unset {
+	background: rgba(200,200,200,0.7);
+}
+
+#calendar ul li.set:hover {
+	/*
+	left: -0.5%;
+	top: -10px;
+	width: 12%;
+	height: 120px;*/
+	background: rgb( 152, 230, 152 );
+}
+
+#calendar ul li div {
+	display: block;
+	font-size: 0.8em;
+	text-align: center;
+}
+
+#calendar ul li div.income { color: green; }
+#calendar ul li div.expense { color: red; }
+
+.view {
+	position: relative;
+	width: 100%;
+}
+
+.hidden {
+	display: none;
+}
+
+#income {
+	background-color: none;
+	font-family: 'Montserrat', sans-serif;
+  background-color: rgb( 230, 255, 242 );
+}
+
+input#income:focus {
+	border: 0 !important;
+	border-bottom: 1px solid black;
+  background-color: rgb( 230, 255, 242 );
+}
+
+.container {
+	height: auto;
+}
+
+/*styles that were applied to 'button' now go here*/
+.header-icons {
+	position: relative;
+	width: 100%;
+	height: 40px;
+}	
+
+.header-icons li {
+	height: 30px;
+	display: inline-block;
+	min-width: 100px;
+	vertical-align: top;
+	flex-grow: 1;
+}
+
+.header-icons ul li:nth-child(1) {
+	max-width: 150px;	
+}
+
+.header-icons ul li:last-child {
+	max-width: 150px;	
+	position: absolute;
+	right: 0px;
+}
+
+.header-icons ul li:last-child div {
+	display: inline;
+	text-align: center;
+}
+
+.header-icons li:last-child div i {
+	margin: 0;	
+}
+
+.main .left {
+	width: 35%;
+	position: relative;
+	top: 10px;
+	font-size: 1.5em;
+	float: left;
+}
+
+.main .right {
+	width: 64%;	
+	font-size: 1.5em;
+	line-height: 15px;
+	float: right;
+}
+
+.inner-app__banner-header {
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+.inner-app__banner-header h1, 
+.inner-app__banner-header h2, 
+.inner-app__banner-header h3, 
+.inner-app__banner-header h4, 
+.inner-app__banner-header h5, 
+.inner-app__banner-header h6, {
+	top: 0px;
+}
+
+.inner-app__banner-header h2 {
+	transition: width 0.2s, font-size 0.2s;
+	width: 70%;
+}
+
+.inner-app__banner-header button,
+.inner-app__banner-header div {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+.inner-app__banner-header div {
+	vertical-align: top;
+	color: darkgreen;
+	min-width: 100px;
+	text-align: right;
+}
+
+.inner-app__banner-header div i {
+	position: relative;
+	margin-left: 10px;
+	top: 10px;
+}
+
+.inner-app__banner-header div i:hover {
+	color: black;
+}
+
+@media screen and (max-width: 555px) {
+	#pie {
+		display: none;
+	}
+
+	.inner-app__banner-header h2 {
+		font-size: 1.4em;
+		width: 60%;
+		min-width: 100px;
+	}
+
+	.inner-app__banner-header div i {
+		position: relative;
+		margin-left: 0px;
+		top: 10px;
+		font-size: 1.2em;
+	}
+
+	.main .left, .main .right {
+		width: 100%;
+		display: block;
+		text-align: center;
+		top: 0px;
+	}
+
+	.main .left {
+		font-size: 1.0em;
+	}
+
+	.main .left #itotal, .main .left #xtotal {
+		display: inline;
+		border-bottom: 0px; 
+	}
+
+	.assetized-logo {
+		font-size: 1.8em;
+		text-align: center;
+	}
+
+	.header--left, .header--right {
+		width: 100%;
+		display: block;
+		height: 30px;
+	}
+
+	.inner-app__banner-header button {
+		font-size: 0.6em;
+		width: 100px;
+	}
+
+	table.budget {
+		font-size: 0.8em;
+	}
+
+	table.budget tr td:first-child {
+		min-width: 130px;
+	}
+
+	#calendar li.unset {
+		display: none;		
+	}
+
+	#calendar li.set {
+		width: 98%;
+		height: 30px;	
+		left: 0; 
+	}
+
+	#calendar li.set div {
+		top: -2px;
+		position: relative;
+		text-align: left;
+		left: 10px;
+	}
+
+	#calendar ul li.set div { display: inline-block; }
+	#calendar ul li.set div:nth-child(1) { margin-right: 5px; }
+}

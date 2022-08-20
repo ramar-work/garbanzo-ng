@@ -1,0 +1,51 @@
+.complete-total {
+	font-weight: bold;
+	height: 100px;
+	width: 90%;
+	min-width: 220px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.complete-total .left {
+	font-weight: normal;
+	text-align: right;
+}
+
+.complete-total .left #itotal {
+	color: darkgreen;
+}
+
+.complete-total .left #xtotal {
+	color: red;
+	padding-bottom: 5px;
+	border-bottom: 2px solid rgb( 40,40,40 );
+}
+
+.complete-total .left #xtotal:before {
+	content: '- ';
+}
+
+.complete-total .right {
+	text-align: right;
+}
+
+.complete-total .right h1 {
+	position: absolute;
+	top: 25%;
+	left: -10px;
+}
+
+.complete-total #total {
+	font-weight: bold;
+	letter-spacing: -2px;
+	position: relative;
+	top: 7.0px;
+	text-shadow: 5px 5px rgba(180,180,180,0.3);
+	color: rgba(60,60,60,0.9);
+	/*filter: blur(1px);*/
+}
+
+.complete-total #total.js-negative {
+	color: red;
+}

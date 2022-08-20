@@ -1,0 +1,36 @@
+<template #modalPopup></template>
+<section id="income">
+	<h2>Your Income</h2>
+	<button class="add" (click)="createComponent('Boot!')">Add New Line</button>
+	<table class="budget">
+		<thead>
+			<th>Item</th>
+			<th>Amount</th>
+			<th>Dep. Date</th>
+		</thead>
+		<tbody *ngFor="let i of incomeLines">
+			<tr>
+				<td>
+					<div class="ctnt">
+						<div>
+							{{ i.name }}
+						</div>
+						<div>
+							<button class="controller">
+								<i class="material-icons">list_alt</i>
+							</button>
+							<button class="controller">
+								<i class="material-icons">create</i>
+							</button>
+							<button class="controller">
+								<i class="material-icons">highlight_off</i>
+							</button>
+						</div>
+					</div>
+				</td>
+				<td>{{ i.amount | currency }}</td>
+				<td>{{ i.day }}</td>
+			</tr>
+		</tbody>
+	</table>
+</section>

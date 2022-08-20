@@ -1,0 +1,27 @@
+.budget-nav {
+	width: 200px;
+	margin: 0 auto;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-bottom: 40px;
+}
+
+.budget-nav a {
+	text-align: center;
+	margin: 10px;
+	color: darkgreen;
+	text-shadow: 2px 2px rgba(180,180,180,0.3);
+}
+
+.budget-nav a:hover {
+	color: green;
+	text-shadow: 2px 2px rgba(255,255,255,0.8);
+}
+
+.budget-nav a:nth-child(1) i ,
+.budget-nav a:nth-child(2) i {
+	letter-spacing: -16px;
+}
+

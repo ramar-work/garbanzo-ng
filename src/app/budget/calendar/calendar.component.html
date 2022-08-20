@@ -1,0 +1,13 @@
+<section id="calendar">
+	<h2>Income & Expense Calendar</h2>
+	<ul>
+		<!-- this is an ngif that controls this... -->
+		<li *ngFor="let i of items" [ngClass]="i.day > 0 ? 'set' : 'unset'"> 
+			<div *ngIf="i.day > 0">
+				{{ i.day }}
+				<div *ngIf="i.amount != 0" [ngClass]="i.type == 'I' ? 'income' : 'expense'">{{ i.name }}</div>
+				<div *ngIf="i.amount != 0">({{ i.amount | currency }})</div>
+			</div>
+		</li>
+	</ul>
+</section>
